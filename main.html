@@ -14,15 +14,16 @@
 	<!-- the entire body must be written by student -->
 
 <form>
-  <h1>Internship Form</h1>
-
   <div>
     <label for="first-name-input">First Name</label>
     <input
       type="text"
       id="first-name-input"
-      name="firstName"
+      required
     >
+    <div class="invalid-feedback">
+      First name required!
+    </div>
   </div>
 
   <div>
@@ -30,8 +31,11 @@
     <input
       type="text"
       id="last-name-input"
-      name="lastName"
+      required
     >
+    <div class="invalid-feedback">
+      Last name required!
+    </div>
   </div>
 
   <div>
@@ -39,9 +43,12 @@
     <input
       type="email"
       id="email-input"
-      name="email"
       placeholder="xyz@abc.com"
+      required
     >
+    <div class="invalid-feedback">
+      Email required!
+    </div>
   </div>
 
   <div>
@@ -49,19 +56,25 @@
     <input
       type="text"
       id="college-input"
-      name="college"
+      required
     >
+    <div class="invalid-feedback">
+      Please provide a valid college.
+    </div>
   </div>
 
   <div>
     <label for="graduation-year">Graduation Year</label>
-    <select id="graduation-year" name="graduationYear">
+    <select id="graduation-year" required>
       <option value="">Choose...</option>
       <option value="2020">2020</option>
       <option value="2021">2021</option>
       <option value="2022">2022</option>
       <option value="2023">2023</option>
     </select>
+    <div class="invalid-feedback">
+      Please select a valid Graduation Year.
+    </div>
   </div>
 
   <div>
@@ -69,19 +82,26 @@
     <input
       type="text"
       id="roll-no-input"
-      name="rollNo"
+      required
     >
+    <div class="invalid-feedback">
+      Please provide a valid Roll no.
+    </div>
   </div>
 
   <div>
     <input
       type="checkbox"
       id="conditions-checkbox"
-      name="conditions"
+      required
     >
     <label for="conditions-checkbox">
       Agree to terms and conditions
     </label>
+
+    <div class="invalid-feedback">
+      You must agree before submitting.
+    </div>
   </div>
 
   <button type="submit">Submit form</button>
